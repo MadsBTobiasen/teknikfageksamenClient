@@ -1,58 +1,14 @@
 class UIElements {
 
-    int returnBttnW = (sW - camW)/2;
+    int returnBttnW = 130;
     int returnBttnH = 50;
-    int returnBttnX = camW + returnBttnW;
+    int returnBttnX = 540 + returnBttnW;
     int returnBttnY = sH - returnBttnH;
 
     //Constructor
     UIElements() {
 
     }
-
-    /*void drawCameraArea() {
-
-        //Læser en frame fra kameraet.
-        if (cam.available() == true) {
-            cam.read();
-        }
-
-        //Tegner kameraets syn.
-        image(cam, camW - 639, 240);
-        
-        //Line ser sådan ud: line(x1, y1, x2, y2);
-        stroke(255, 0, 0); //Giver boksen en rød farve.
-        //Vertikale linjer.
-        line(scanAreaX, scanAreaY, scanAreaX+scanAreaW, scanAreaY);
-        line(scanAreaX, scanAreaY+scanAreaH, scanAreaX+scanAreaW, scanAreaY+scanAreaH);
-        //Horisontale linjer.
-        line(scanAreaX, scanAreaY, scanAreaX, scanAreaY+scanAreaH);
-        line(scanAreaX+scanAreaW, scanAreaY, scanAreaX+scanAreaW, scanAreaY+scanAreaH);
-        //Tidspunkt linjer.
-        line(scanAreaW/4*1+scanAreaX, scanAreaY, scanAreaW/4*1+scanAreaX, scanAreaY+scanAreaH);
-        line(scanAreaW/4*2+scanAreaX, scanAreaY, scanAreaW/4*2+scanAreaX, scanAreaY+scanAreaH);
-        line(scanAreaW/4*3+scanAreaX, scanAreaY, scanAreaW/4*3+scanAreaX, scanAreaY+scanAreaH);
-        //Tekst der indikirer hvilken boks, svarer til hvilket tidspunkt.
-        textSize(16);
-        fill(255, 0, 0);
-        textAlign(CENTER, CENTER);
-        text("Nat", scanAreaX, scanAreaY, scanAreaW/4*1, -50);
-        text("Morgen", scanAreaX+scanAreaW/4*1, scanAreaY, scanAreaW/4*1, -50);
-        text("Middag", scanAreaX+scanAreaW/4*2, scanAreaY, scanAreaW/4*1, -50);
-        text("Aften", scanAreaX+scanAreaW/4*3, scanAreaY, scanAreaW/4*1, -50);
-        
-        noStroke();
-
-    }
-    
-    //Gør baggrunden grå.
-    void backgroundForScannerAndPillAdder() {
-        noStroke();
-        fill(200);
-        rectMode(CORNER);
-        rect(0, 0, camW, height);
-        rect(camW, 0, seperatorW, height);
-    }*/
 
     //Sender brugeren tilbage til start-menuen, når "Tilbage" bliver trykket på.
     void returnBttn() {
@@ -140,9 +96,9 @@ class UIElements {
     }
 
     //Information boks med kun en besked.
-    void informationDialog(String paneMessage) {
+    /*void informationDialog(String paneMessage) {
         showMessageDialog(frame, paneMessage);
-    }
+    }*/
 
     //Information boks, med navn, besked og beskedtype.
     void informationDialog(String paneName, String paneMessage, String messageType) {
